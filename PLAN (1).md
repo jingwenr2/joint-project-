@@ -1,72 +1,72 @@
-# PLAN.md — TTPR 网络安全研究项目
+# PLAN.md — TTPR Cybersecurity Research Project
 
-> 状态:🟡 待定 — 研究方向尚未确定,本文件为通用框架,团队敲定方向后填空即可。
+> Status: 🟡 TBD — Research direction not yet decided. This is a generic template; fill in the blanks once the team picks a direction.
 
-## 1. 项目背景
+## 1. Background
 
-与 Cybersecurity Reach Foundation(501c3)合作的 TTPR @baruch 研究项目。团队将分析真实网络安全数据,产出一份可发表的研究报告。
+A research project in collaboration with the Cybersecurity Reach Foundation (501c3) and TTPR @baruch. The team will analyze real cybersecurity data and publish a research report.
 
-- 数据来源:
-  - `events` — 蜜罐(honeypot)攻击日志,3500万+ 条记录,记录攻击来源、目标服务、尝试的用户名/密码、利用的漏洞等
-  - `ransomlook_posts` — 勒索软件团伙"耻辱墙"公开数据,记录受害组织、勒索团伙、曝光时间
-- 工具:Metabase(已配置好,免设置)/ SQL / Python / Excel / Tableau,团队自选
-- 参考资料:
-  - [The Data 数据字段说明](https://ttpr.cybersecurityreach.org/guide.html)
-  - [Project Ideas 十个候选方向](https://ttpr.cybersecurityreach.org/ideas.html)
-  - 联系人:Leonard (leonard.melnik@cybersecurityreach.org)
+- Datasets:
+  - `events` — Honeypot attack logs, 35M+ records, capturing attack source, targeted service, attempted usernames/passwords, exploits used, etc.
+  - `ransomlook_posts` — Ransomware gangs' public "shame site" data: victim organization, gang name, date discovered
+- Tools: Metabase (already set up, no configuration needed) / SQL / Python / Excel / Tableau — team's choice
+- References:
+  - [Data Guide — field explanations](https://ttpr.cybersecurityreach.org/guide.html)
+  - [Project Ideas — 10 candidate directions](https://ttpr.cybersecurityreach.org/ideas.html)
+  - Contact: Leonard (leonard.melnik@cybersecurityreach.org)
 
-## 2. 研究问题
+## 2. Research Question
 
-> ⬜ **待填写** — 一句话,具体、可用数据回答的问题(避免过于宽泛)
+> ⬜ **TBD** — One sentence, specific and answerable with the data (avoid something too broad)
 
-**候选方向(团队讨论后从中选一个,或自定义):**
+**Candidate directions (team picks one after discussion, or defines a custom one):**
 
-| # | 方向 | 简述 |
-|---|------|------|
-| A | 蜜罐攻击行为分析 | 地域×时间规律 / 密码套路 / 攻击者"得手"后行为 / 扫描器指纹识别 / 异常突增事件溯源 |
-| B | 勒索软件团伙画像 | 团伙兴衰周期、受害行业/地域分布,或深挖单一团伙(如 LockBit、Akira)做完整画像 |
-| C | 双数据集结合分析 | 蜜罐攻击量与勒索软件受害数量是否存在时间上的关联,是难度最高但最有原创性的方向 |
-| D | 其他 / 自定义 | ______________________ |
+| # | Direction | Summary |
+|---|-----------|---------|
+| A | Honeypot attack behavior analysis | Geo × time patterns / password strategy / post-"login" attacker behavior / scanner fingerprinting / spike & anomaly investigation |
+| B | Ransomware gang profiling | Gang rise-and-fall lifecycle, victim industry/geography distribution, or a deep profile of a single gang (e.g., LockBit, Akira) |
+| C | Combined dataset analysis | Whether honeypot attack volume correlates over time with ransomware victim counts — the most ambitious but most original direction |
+| D | Other / custom | ______________________ |
 
-## 3. 团队分工
+## 3. Team Roles
 
-| 姓名 | 负责模块 | 备注 |
-|------|----------|------|
-| | 数据探索 / 查询 | |
-| | 可视化 | |
-| | 报告撰写 | |
-| | 项目协调 / 联络 Leonard | |
+| Name | Responsibility | Notes |
+|------|-----------------|-------|
+| | Data exploration / querying | |
+| | Visualization | |
+| | Report writing | |
+| | Project coordination / liaison with Leonard | |
 
-## 4. 时间线(约6周,对齐官方节奏)
+## 4. Timeline (~6 weeks, aligned with the program's pace)
 
-- [ ] **Week 1–2** 探索数据,组队,敲定研究问题
-- [ ] **Week 3–4** 深入分析,制作支撑结论的可视化图表
-- [ ] **Week 5** 撰写报告初稿(讲清楚数据背后的故事)
-- [ ] **Week 6** 修改、定稿,以基金会名义发布
+- [ ] **Week 1–2** Explore the data, form the team, define a research question
+- [ ] **Week 3–4** Deep-dive analysis, build visualizations that support the findings
+- [ ] **Week 5** Draft the written report (tell the story behind the data)
+- [ ] **Week 6** Revise, finalize, and publish under the Foundation's name
 
-## 5. 交付物
+## 5. Deliverables
 
-- [ ] 明确的研究问题
-- [ ] 分析结果(SQL/Python/Excel/Tableau 均可)
-- [ ] 支撑结论的可视化图表
-- [ ] 完整书面报告(解释发现了什么、为什么重要)
+- [ ] A clearly defined research question
+- [ ] Analysis results (SQL/Python/Excel/Tableau, any of these)
+- [ ] Visualizations that back up the conclusions
+- [ ] A complete written report (explaining what was found and why it matters)
 
-## 6. 仓库结构(建议)
+## 6. Suggested Repo Structure
 
 ```
 joint-project-/
-├── README.md          # 项目介绍
-├── PLAN.md             # 本文件
-├── data/               # 导出的数据 / 查询结果(注意别提交过大文件)
-├── queries/             # SQL 查询
-├── notebooks/           # 分析代码(Python/Jupyter 等)
-├── viz/                 # 图表、可视化产出
-└── report/              # 最终报告草稿与定稿
+├── README.md          # Project overview
+├── PLAN.md             # This file
+├── data/               # Exported data / query results (avoid committing very large files)
+├── queries/             # SQL queries
+├── notebooks/           # Analysis code (Python/Jupyter etc.)
+├── viz/                 # Charts, visualization outputs
+└── report/              # Draft and final report
 ```
 
-## 7. 下一步待办
+## 7. Next Steps
 
-- [ ] 团队讨论,从上面 A/B/C/D 中选定方向,更新第 2 节
-- [ ] 找 Leonard 拿 Metabase 登录权限
-- [ ] 通读 Data Guide,熟悉字段
-- [ ] 第一次团队会议,分配第 3 节的分工
+- [ ] Team discussion — pick a direction from A/B/C/D above, update Section 2
+- [ ] Ask Leonard for Metabase login access
+- [ ] Read through the Data Guide to get familiar with the fields
+- [ ] First team meeting — assign roles from Section 3
